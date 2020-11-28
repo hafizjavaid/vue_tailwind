@@ -1,0 +1,32 @@
+
+1)npm install tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
+2) create postcss.config.js in root and paste 
+
+module.exports = {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  }
+}
+
+3)npx tailwindcss init
+4) paste code 
+module.exports = {
+  purge: [],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {},
+  },
+  variants: {},
+  plugins: [],
+}
+
+5) create tailwind.css file in asset folder
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+6) @import url("./assets/tailwind.css");
+
+7) npm run serve
